@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const lib = require("./.gitignore/key.js");
 //const client = new Discord.Client();
 
 const { Client, Intents } = require('discord.js');
@@ -10,7 +11,8 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const command = require('./commands.js');
 
 
-client.login('ODc5MDc0NDc3Mzc0MzI0Nzg2.YSKb5w.bs8msvR49edLEJv00qmALFoiJ_8');
+//client.login('ODc5MDc0NDc3Mzc0MzI0Nzg2.GO-PzQ.F0WRMxw7ufH4fhB-zLrtbZ6gEbt9x_TG0kQ0mo');
+client.login(lib.monke());
 
 
 //event handler to check when discord bot is ready
@@ -122,8 +124,8 @@ function gotMessage(msg)
 			msg.reply( arrayGoodnight[ Math.floor( Math.random() * arrayGoodnight.length ) ] );
 		}
 
-		if ( msg.content.substr(i, 5) === "Luca" || 
-			msg.content.substr(i, 5) === "luca")
+		if ( msg.content.substr(i, 4) === "Luca" || 
+			msg.content.substr(i, 4) === "luca")
 		{
 			msg.reply("Put me in your basement, onii-san");
 			msg.react("👀");
