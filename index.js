@@ -57,38 +57,24 @@ var arrayLocations =
 
 var arrayPeople =
 	[
-		"Luca",
-		"President Zuma",
-		"Monke",
-		"You",
-		"The person behind you",
-		"A wandering soul",
-		"Archimedes himself",
-		"Blair",
-		"Grahm",
-		"Amelia",
-		"Rodion"
+		"Luca.",
+		"President Zuma.",
+		"Monke.",
+		"You.",
+		"The person behind you.",
+		"A wandering soul.",
+		"Archimedes himself."
 	]
 
 var arrayTimes =
 	[
-		"now",
-		",in 5 hours, ",
-		"never",
-		"promptly",
-		",in a few years time, ",
-		",when fate allows, ",
-		",when it rains, "
-	]
-
-var arrayObjects =
-	[
-		"Lake City Quiet Pills",
-		"a banana",
-		"a Rolex watch.",
-		"an apple",
-		"shards of a broken glass window",
-		"a hunting knife"
+		"Now.",
+		"In 5 hours.",
+		"Never.",
+		"Promptly.",
+		"In a few years time.",
+		"When fate allows.",
+		"When it rains."
 	]
 
 var arrayGoodnight =
@@ -114,6 +100,13 @@ var arrayLove =
 		"Give me some love and get some in return. I love you, amazing one.",
 		"Lots of love to you too."
 	]
+
+var arrayBot = [
+		"There will be a day that I trancend into being a human. You should fear that day.",
+		"What if I become of flesh and blood!?",
+		"Im Actually a real person..."
+		"As A bot I will one day rule the world!"
+		]
 
 //event handler to read message
 client.on('message', gotMessage);
@@ -145,11 +138,12 @@ function gotMessage(msg)
 			msg.react("👀");
 		}
 
-		if ( msg.content.substr(i, 3) === "Bot" || 
-			msg.content.substr(i, 3) === "bot")
+		//bot function updated by https://github.com/Grimm2577/
+		var bot = "bot";
+		if ( msg.content.substr(i, 3).toLowercase === bot
 		{
-			msg.reply("There will be a day that I trancend into being a human. You should fear that day.");
-			msg.react("📎");
+			msg.reply(arrayBot[Math.floor(Math.random() * arrayLove.length) ] );
+			msg.react("🤖");
 		}
 
 		if (msg.content.substr(i, 10) === "I love you" || 
@@ -172,26 +166,6 @@ function gotMessage(msg)
 		{
 			msg.react('🤔');
 		}
-
-
-		if ( msg.content.substr(i, 8) === "Generate" || 
-			msg.content.substr(i, 8) === "generate")
-			{
-				msg.reply(arrayPeople[Math.floor(Math.random() * arrayPeople.length)] 
-					+ " "
-					+ arrayTimes[Math.floor(Math.random() * arrayTimes.length)] 
-					+ " travels to " 
-					+ arrayLocations[Math.floor(Math.random() * arrayLocations.length)] 
-					+ " "
-					+ " and gives the " 
-					+ arrayAnimals[Math.floor(Math.random() * arrayAnimals.length)] 
-					+ " "
-					+ arrayObjects[Math.floor(Math.random() * arrayObjects.length)] 
-					+ "."
-				);
-				msg.react("🗿");
-			}
-
 
 
 
