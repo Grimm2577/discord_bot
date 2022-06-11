@@ -177,7 +177,7 @@ function gotMessage(msg)
 		*/
 
 		//logic for returning the time
-		if(msg.content.substr(i,15) && msg.content.toLowerCase() ===  timeQuestion) {
+		if(msg.content.substr(i,15).toLowerCase() ===  timeQuestion) {
 			msg.reply("It is " + time);
 		}
 
