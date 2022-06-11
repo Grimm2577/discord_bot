@@ -57,24 +57,38 @@ var arrayLocations =
 
 var arrayPeople =
 	[
-		"Luca.",
-		"President Zuma.",
-		"Monke.",
-		"You.",
-		"The person behind you.",
-		"A wandering soul.",
-		"Archimedes himself."
+		"Luca",
+		"President Zuma",
+		"Monke",
+		"You",
+		"The person behind you",
+		"A wandering soul",
+		"Archimedes himself",
+		"Blair",
+		"Grahm",
+		"Amelia",
+		"Rodion"
 	]
 
 var arrayTimes =
 	[
-		"Now.",
-		"In 5 hours.",
-		"Never.",
-		"Promptly.",
-		"In a few years time.",
-		"When fate allows.",
-		"When it rains."
+		"now",
+		",in 5 hours, ",
+		"never",
+		"promptly",
+		",in a few years time, ",
+		",when fate allows, ",
+		",when it rains, "
+	]
+
+var arrayObjects =
+	[
+		"Lake City Quiet Pills",
+		"a banana",
+		"a Rolex watch.",
+		"an apple",
+		"shards of a broken glass window",
+		"a hunting knife"
 	]
 
 var arrayGoodnight =
@@ -158,6 +172,26 @@ function gotMessage(msg)
 		{
 			msg.react('🤔');
 		}
+
+
+		if ( msg.content.substr(i, 8) === "Generate" || 
+			msg.content.substr(i, 8) === "generate")
+			{
+				msg.reply(arrayPeople[Math.floor(Math.random() * arrayPeople.length)] 
+					+ " "
+					+ arrayTimes[Math.floor(Math.random() * arrayTimes.length)] 
+					+ " travels to " 
+					+ arrayLocations[Math.floor(Math.random() * arrayLocations.length)] 
+					+ " "
+					+ " and gives the " 
+					+ arrayAnimals[Math.floor(Math.random() * arrayAnimals.length)] 
+					+ " "
+					+ arrayObjects[Math.floor(Math.random() * arrayObjects.length)] 
+					+ "."
+				);
+				msg.react("🗿");
+			}
+
 
 
 
