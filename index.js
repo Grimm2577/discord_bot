@@ -36,23 +36,23 @@ function readyDiscord ()
 
 var arrayAnimals =
 	[
-		"Cat",
-		"Dog",
-		"Oyster",
-		"Chimpanzee",
-		"Tiger",
-		"Bear"
+		"cat",
+		"dog",
+		"oyster",
+		"chimpanzee",
+		"tiger",
+		"bear"
 	];
 
 var arrayLocations =
 	[
-		"Wakanda.",
-		"Milky Way Galaxy.",
-		"Harambe's Den.",
-		"The White House.",
-		"Namibia.",
-		"The basement.",
-		"At home."
+		"Wakanda",
+		"The Milky Way Galaxy",
+		"Harambe's Den",
+		"The White House",
+		"Namibia",
+		"the basement",
+		"the home"
 	]
 
 var arrayPeople =
@@ -85,7 +85,7 @@ var arrayObjects =
 	[
 		"Lake City Quiet Pills",
 		"a banana",
-		"a Rolex watch.",
+		"a Rolex watch",
 		"an apple",
 		"shards of a broken glass window",
 		"a hunting knife"
@@ -182,7 +182,6 @@ function gotMessage(msg)
 					+ arrayTimes[Math.floor(Math.random() * arrayTimes.length)] 
 					+ " travels to " 
 					+ arrayLocations[Math.floor(Math.random() * arrayLocations.length)] 
-					+ " "
 					+ " and gives the " 
 					+ arrayAnimals[Math.floor(Math.random() * arrayAnimals.length)] 
 					+ " "
