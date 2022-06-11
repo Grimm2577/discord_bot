@@ -102,6 +102,12 @@ var arrayGoodnight =
 		"Even bots need rest.",
 		"Good night, beautiful one."
 	]
+var arrayBot = [
+		"There will be a day that I trancend into being a human. You should fear that day.",
+		"What if I become of flesh and blood!?",
+		"Im Actually a real person..."
+		"As A bot I will one day rule the world!"
+		]
 
 var arrayLove =
 	[
@@ -114,6 +120,8 @@ var arrayLove =
 		"Give me some love and get some in return. I love you, amazing one.",
 		"Lots of love to you too."
 	]
+
+	
 
 //event handler to read message
 client.on('message', gotMessage);
@@ -145,12 +153,12 @@ function gotMessage(msg)
 			msg.react("👀");
 		}
 
-		if ( msg.content.substr(i, 3) === "Bot" || 
-			msg.content.substr(i, 3) === "bot")
-		{
-			msg.reply("There will be a day that I trancend into being a human. You should fear that day.");
-			msg.react("📎");
-		}
+		//bot function updated by https://github.com/Grimm2577/
+		var bot = "bot";
+		if ( msg.content.substr(i, 3).toLowercase() === bot {
+		    msg.reply( arrayBot[ Math.floor( Math.random() * arrayBot.length ) ] );
+		    msg.react("🤖");	
+		    }
 
 		if (msg.content.substr(i, 10) === "I love you" || 
 			msg.content.substr(i, 10) === "i love you")
