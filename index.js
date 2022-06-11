@@ -161,6 +161,25 @@ function gotMessage(msg)
 
 
 
+				/* Time Feature Implemented 
+		By : https://github.com/Grimm2577 */
+
+		//getting local machine time
+		var actualTime = new Date ;
+		var time = actualTime.getHours() +":"+ actualTime.getMinutes();
+
+		//removing case sensitivity
+		var timeQuestion = "what time is it"
+
+		/* 
+		msg.content.toLowerCase() ===  timeQuestion
+		turns msg content to lower case & compare it to var
+		*/
+
+		//logic for returning the time
+		if(msg.content.substr(i,15) && msg.content.toLowerCase() ===  timeQuestion) {
+			msg.reply("It is " + time);
+		}
 
 
 
