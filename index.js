@@ -41,6 +41,8 @@ var arrayAnimals =
 		"oyster",
 		"chimpanzee",
 		"tiger",
+		"rat",
+		"capybara",
 		"bear"
 	];
 
