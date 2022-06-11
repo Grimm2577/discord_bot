@@ -105,7 +105,7 @@ var arrayGoodnight =
 var arrayBot = [
 		"There will be a day that I trancend into being a human. You should fear that day.",
 		"What if I become of flesh and blood!?",
-		"Im Actually a real person..."
+		"Im Actually a real person...",
 		"As A bot I will one day rule the world!"
 		]
 
@@ -155,7 +155,7 @@ function gotMessage(msg)
 
 		//bot function updated by https://github.com/Grimm2577/
 		var bot = "bot";
-		if ( msg.content.substr(i, 3).toLowercase() === bot {
+		if ( msg.content.substr(i, 3).toLowerCase() === bot) {
 		    msg.reply( arrayBot[ Math.floor( Math.random() * arrayBot.length ) ] );
 		    msg.react("🤖");	
 		    }
