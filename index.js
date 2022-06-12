@@ -228,18 +228,6 @@ function gotMessage(msg)
 
 
 		
-		//attach an image
-//		if(msg.content.substr(i,5).toLowerCase() ===  "!face") {
-//			const { MessageAttachment, MessageEmbed } = require('discord.js');
-//			const file = new MessageAttachment('https://thispersondoesnotexist.com/image');
-//			const exampleEmbed = new MessageEmbed()
-//				.setTitle('Some title')
-//				.setImage('https://thispersondoesnotexist.com/image');
-//			
-//			msg.channel.send({ embeds: [exampleEmbed], files: [file] });
-//
-//		}
-
 		
 
 		if(msg.content.substr(i,5).toLowerCase() ===  "!face") {
@@ -256,14 +244,14 @@ function gotMessage(msg)
 
 		}	
 
-
-
-
-//		if(msg.content.substr(i,5).toLowerCase() ===  "!face") {
-//			msg.reply("https://thispersondoesnotexist.com/image")
-//		}
-
-
-
 	}
+
+
+
+
+
+
+
+	
+
 }
