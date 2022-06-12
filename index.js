@@ -67,7 +67,7 @@ var arrayPeople =
 		"A wandering soul",
 		"Archimedes himself",
 		"Blair",
-		"Grahm",
+		"Graham",
 		"Amelia",
 		"Rodion"
 	]
