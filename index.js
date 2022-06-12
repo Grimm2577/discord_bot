@@ -226,7 +226,16 @@ function gotMessage(msg)
 
 
 
+		//help cmd by : https://github.com/Grimm2577
+		//feature to display all current *working* commnds (which have a definite purpose)
 
+		var help = "!help";
+		var commands = "'!help',\n'what time is it'\n'I love you',\n'Goodnight',\n'generate',\n'bot'";
+
+		if(msg.content.substr(i,5).toLowerCase === help ) {
+			msg.reply("Current List Of Available Commands \n",commands);
+			msg.react("🩹");
+		}
 		
 		
 
