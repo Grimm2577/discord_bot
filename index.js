@@ -224,18 +224,45 @@ function gotMessage(msg)
 			msg.reply("It is " + time);
 		}
 
+
+
+
 		
 		//attach an image
+//		if(msg.content.substr(i,5).toLowerCase() ===  "!face") {
+//			const { MessageAttachment, MessageEmbed } = require('discord.js');
+//			const file = new MessageAttachment('https://thispersondoesnotexist.com/image');
+//			const exampleEmbed = new MessageEmbed()
+//				.setTitle('Some title')
+//				.setImage('https://thispersondoesnotexist.com/image');
+//			
+//			msg.channel.send({ embeds: [exampleEmbed], files: [file] });
+//
+//		}
+
+		
+
 		if(msg.content.substr(i,5).toLowerCase() ===  "!face") {
 			const { MessageAttachment, MessageEmbed } = require('discord.js');
-			const file = new MessageAttachment('https://thispersondoesnotexist.com/image');
+			const { exec } = require('child_process');
+			exec('curl https://thispersondoesnotexist.com/image --output /tmp/image.png');
+			const file = new MessageAttachment('../../../../tmp/image.png');
 			const exampleEmbed = new MessageEmbed()
 				.setTitle('Some title')
-				.setImage('https://thispersondoesnotexist.com/image');
+				//.setImage('attachment:///home/wifiengine/Images/uzair_playing_anime.png');
+				.setImage('attachment:///tmp/image.png');
 			
 			msg.channel.send({ embeds: [exampleEmbed], files: [file] });
 
-		}
+		}	
+
+
+
+
+//		if(msg.content.substr(i,5).toLowerCase() ===  "!face") {
+//			msg.reply("https://thispersondoesnotexist.com/image")
+//		}
+
 
 
 	}
