@@ -232,7 +232,7 @@ function gotMessage(msg)
 		var cmds = "!commands";
 		var commands = "'!commands',\n'what time is it'\n'I love you',\n'Goodnight',\n'generate',\n'bot'";
 
-		if(msg.content.substr(i,9).toLowerCase === cmds ) {
+		if(msg.content.substr(i,9).toLowerCase() === cmds ) {
 			msg.reply("Current List Of Available Commands \n",commands);
 			msg.react("🩹");
 		}
