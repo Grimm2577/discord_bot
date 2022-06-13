@@ -15,6 +15,8 @@ const command = require('./commands.js');
 client.login(lib.monke());
 
 
+
+
 //event handler to check when discord bot is ready
 client.on('ready', readyDiscord);
 function readyDiscord ()
@@ -254,6 +256,11 @@ function gotMessage(msg)
 		}	
 
 		
+		if(msg.content.substr(i,8).toLowerCase() ===  "!destroy") {
+			client.destroy();
+		}
+
+
 
 	}
 
