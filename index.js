@@ -143,9 +143,9 @@ function gotMessage(msg)
 //			msg.reply("Did I hear my name mentioned? Are you trying to summon me? How can I serve you today?");
 //			console.log(i);
 //		}
-
-		if ( msg.content.substr(i, 9) == "Goodnight" || 
-			msg.content.substr(i, 9) == "goodnight")
+		
+		var gn = "goodnight";
+		if ( msg.content.substr(i, 9).toLowerCase() === gn)
 		{
 			msg.reply( arrayGoodnight[ Math.floor( Math.random() * arrayGoodnight.length ) ] );
 		}
@@ -163,9 +163,9 @@ function gotMessage(msg)
 		    msg.reply( arrayBot[ Math.floor( Math.random() * arrayBot.length ) ] );
 		    msg.react("🤖");	
 		    }
-
-		if (msg.content.substr(i, 10) === "I love you" || 
-			msg.content.substr(i, 10) === "i love you")
+		
+		var love = "i love you";
+		if (msg.content.substr(i, 10).toLowerCase() === love)
 		{
 			msg.reply( arrayLove[ Math.floor( Math.random() * arrayLove.length ) ] );
 		}
@@ -185,9 +185,8 @@ function gotMessage(msg)
 			msg.react('🤔');
 		}
 
-
-		if ( msg.content.substr(i, 8) === "Generate" || 
-			msg.content.substr(i, 8) === "generate")
+		var gen = "generate" ;
+		if ( msg.content.substr(i, 8).toLowerCase() === gen)
 			{
 				msg.reply(arrayPeople[Math.floor(Math.random() * arrayPeople.length)] 
 					+ " "
@@ -232,7 +231,7 @@ function gotMessage(msg)
 		//feature to display all current *working* commnds (which have a definite purpose)
 
 		var cmds = "!commands";
-		var commands = "'!commands',\n'what time is it'\n'I love you',\n'Goodnight',\n'generate',\n'bot'";
+		var commands = "'!𝔠𝔬𝔪𝔪𝔞𝔫𝔡𝔰',\n >'𝔴𝔥𝔞𝔱 𝔱𝔦𝔪𝔢 𝔦𝔰 𝔦𝔱'\n >'ℑ 𝔩𝔬𝔳𝔢 𝔶𝔬𝔲',\n >'𝔊𝔬𝔬𝔡𝔫𝔦𝔤𝔥𝔱',\n >'𝔤𝔢𝔫𝔢𝔯𝔞𝔱𝔢',\n >'𝔟𝔬𝔱'";
 
 		if(msg.content.substr(i,9).toLowerCase() === cmds ) {
 			msg.reply("Current List Of Available Commands \n" + commands);
