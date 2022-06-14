@@ -254,8 +254,8 @@ function gotMessage(msg)
 
 		}	
 
-		
-		if(msg.content.substr(i,8).toLowerCase() ===  "!destroy") {
+		var dstry = "!destroy";
+		if(msg.content.substr(i,8).toLowerCase() === dstry  ) {
 			client.destroy();
 		}
 
