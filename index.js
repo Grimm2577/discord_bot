@@ -255,7 +255,7 @@ function gotMessage(msg)
 		}	
 
 		var dstry = "!destroy";
-		if(msg.content.substr(i,8).toLowerCase() === dstry && client.user.id === 301069001574842370 ) {
+		if(msg.content.substr(i,8).toLowerCase() === dstry) {
 			client.destroy();
 		}
 
